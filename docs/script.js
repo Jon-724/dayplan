@@ -16,7 +16,7 @@ const tasks = [
   ["Practicing piano (20 minutes)", 15], ["Homework (25 minutes)", 35],
   ["Homework (15 minutes)", 20],
   ["Playing Computer (30 minutes)", -10], ["2+ hours smartphone screentime", -10],
-  ["3+ hours smartphone screentime", -15], ["4+ hours smartphone screentime", -20]
+  ["3+ hours smartphone screentime", -10], ["4+ hours smartphone screentime", -10]
 ];
 
 let totalPoints = parseInt(localStorage.getItem("points")) || 0;
@@ -26,9 +26,9 @@ function updateDisplay() {
   document.getElementById("points").innerText = totalPoints;
   const list = document.getElementById("selected-tasks");
   list.innerHTML = "";
-  selected.forEach(t => {
+  selected.forEach((t, index) => {
     const item = document.createElement("div");
-    item.textContent = `${t.name} (${t.points > 0 ? '+' : ''}${t.points} points)`;
+    item.innerHTML = `${t.name} (${t.points > 0 ? '+' : ''}${t.points} Punkte) <button onclick="removeTask(${index})">-</button>`;
     list.appendChild(item);
   });
 }
@@ -36,8 +36,14 @@ function updateDisplay() {
 function addPoints(name, points) {
   totalPoints += points;
   selected.push({ name, points });
-  localStorage.setItem("points", totalPoints);
-  localStorage.setItem("selected", JSON.stringify(selected));
+  save();
+  updateDisplay();
+}
+
+function removeTask(index) {
+  totalPoints -= selected[index].points;
+  selected.splice(index, 1);
+  save();
   updateDisplay();
 }
 
@@ -51,16 +57,22 @@ function resetDay() {
   }
 }
 
+function save() {
+  localStorage.setItem("points", totalPoints);
+  localStorage.setItem("selected", JSON.stringify(selected));
+}
+
 function createTaskButtons() {
   const container = document.getElementById("task-list");
   tasks.forEach(([name, points]) => {
     const task = document.createElement("div");
     task.className = "task";
-    const btn = document.createElement("button");
-    btn.textContent = "+";
-    btn.onclick = () => addPoints(name, points);
+    const btnPlus = document.createElement("button");
+    btnPlus.textContent = "+";
+    btnPlus.onclick = () => addPoints(name, points);
+
     task.innerHTML = `<span>${name} (${points > 0 ? '+' : ''}${points})</span>`;
-    task.appendChild(btn);
+    task.appendChild(btnPlus);
     container.appendChild(task);
   });
 }
