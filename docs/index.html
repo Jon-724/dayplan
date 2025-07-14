@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>dayplan</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day Plan Punkte Tracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>dayplan</h1>
-  <div id="task-list"></div>
-  <p>points: <span id="points">0</span>/100</p>
-  <button onclick="resetTasks()">reset</button>
+  <h1>Day Plan Punkte Tracker</h1>
+  <div id="summary">Gesamtpunkte: <span id="points">0</span> / 100</div>
+
+  <div class="task-list" id="task-list"></div>
+
+  <button onclick="resetDay()">Zurücksetzen</button>
+
+  <h3>Ausgewählte Aufgaben:</h3>
+  <div id="selected-tasks"></div>
 
   <script src="script.js"></script>
 </body>
