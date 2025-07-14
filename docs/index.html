@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dayplan</title>
+  <title>Day Plan Punkte Tracker</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>dayplan</h1>
-  <div id="summary">points: <span id="points">0</span> / 100</div>
+  <h1>🌞 Day Plan Punkte Tracker</h1>
+  <div id="summary">Gesamtpunkte: <span id="points">0</span> / 100</div>
 
   <div class="task-list" id="task-list"></div>
 
-  <button onclick="resetDay()">reset</button>
+  <button id="reset-btn" onclick="resetDay()">🔄 Zurücksetzen</button>
 
-  <h3>done:</h3>
+  <h3>📋 Ausgewählte Aufgaben:</h3>
   <div id="selected-tasks"></div>
 
   <script src="script.js"></script>
