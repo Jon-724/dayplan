@@ -16,7 +16,7 @@ const tasks = [
   ["Practicing piano (20 minutes)", 15], ["Homework (25 minutes)", 35],
   ["Homework (15 minutes)", 20],
   ["Playing Computer (30 minutes)", -10], ["2+ hours smartphone screentime", -10],
-  ["3+ hours smartphone screentime", -10], ["4+ hours smartphone screentime", -10]
+  ["3+ hours smartphone screentime", -15], ["4+ hours smartphone screentime", -20]
 ];
 
 let totalPoints = parseInt(localStorage.getItem("points")) || 0;
