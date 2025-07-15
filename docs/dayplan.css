@@ -20,9 +20,8 @@ h1 {
 .task-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 20px;
+  justify-content: flex-start;
+  gap: 10px; 
 }
 
 .task {
