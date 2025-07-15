@@ -1,1 +1,98 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  color: #333;
+  margin: 0;
+}
 
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+#summary {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.task {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task span {
+  flex: 1;
+}
+
+.task button {
+  padding: 6px 12px;
+  margin-left: 5px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task button.minus {
+  background-color: #e74c3c;
+}
+
+.task button:hover {
+  opacity: 0.9;
+}
+
+#reset-btn {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #e67e22;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background-color: #d35400;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#selected-tasks {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  line-height: 1.6;
+}
