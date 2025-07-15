@@ -39,12 +39,6 @@
       background: #2980b9;
     }
   </style>
-  <script>
-    const name = localStorage.getItem("benutzername");
-if (name) {
-    document.getElementById("begrüßung").textContent = `Hallo, ${name}!`;
-}
-  </script>
 </head>
 <body>
   <h2 id="begrüßung"></h2>
@@ -53,5 +47,12 @@ if (name) {
     <a href="dayplan.html">dayplan (responsible)</a>
     <a href="zbuchstabe.html">random-letter-generator</a>
   </div>
+
+  <script>
+    const name = localStorage.getItem("benutzername");
+    if (name) {
+        document.getElementById("begrüßung").textContent = `Hallo, ${name}!`;
+    }
+  </script>
 </body>
 </html>
