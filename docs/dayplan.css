@@ -1,99 +1,99 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 20px;
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
-  color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
   margin: 0;
+  padding: 20px;
+  color: #333;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
+  color: #222;
 }
 
 #summary {
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  font-weight: bold;
+  margin: 10px 0 20px;
+  font-size: 1.2em;
 }
 
 .task-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 15px;
-  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .task {
-  background: #ffffff;
-  padding: 8px 10px; 
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
-  transition: transform 0.2s ease-in-out;
-}
-
-.task:hover {
-  transform: scale(1.02);
-}
-
-.task span {
-  flex: 1;
 }
 
 .task button {
-  padding: 6px 12px;
-  margin-left: 5px;
-  background-color: #3498db;
-  border: none;
-  border-radius: 5px;
+  background-color: #4caf50;
   color: white;
-  font-weight: bold;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.task button.minus {
-  background-color: #e74c3c;
-}
-
 .task button:hover {
-  opacity: 0.9;
+  background-color: #45a049;
 }
 
 #reset-btn {
   display: block;
-  margin: 0 auto 20px auto;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #3498db;
-  border: none;
-  border-radius: 6px;
+  margin: 0 auto 20px;
+  padding: 8px 20px;
+  font-size: 1em;
+  background-color: #f44336;
   color: white;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 #reset-btn:hover {
-  background-color: #d35400;
+  background-color: #d32f2f;
 }
 
 h3 {
-  font-size: 1.2rem;
+  text-align: center;
   margin-top: 30px;
-  margin-bottom: 10px;
 }
 
 #selected-tasks {
-  background: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
   padding: 15px;
   border-radius: 10px;
-  max-height: 250px;
-  overflow-y: auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  line-height: 1.6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#selected-tasks div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+#selected-tasks button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#selected-tasks button:hover {
+  background-color: #d32f2f;
 }
