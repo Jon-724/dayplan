@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ["Training", 25],
   ["Trampolin (10 minutes)", 15],
   ["Workout (10 minutes)", 25],
-  ["Workout (5 minutes)", 10]
+  ["Workout (5 minutes)", 10],
   ["Playing Computer (30 minutes)", -10],
   ["2+ hours smartphone screentime", -10],
   ["3+ hours smartphone screentime", -15],
