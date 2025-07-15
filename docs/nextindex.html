@@ -39,8 +39,15 @@
       background: #2980b9;
     }
   </style>
+  <script>
+    const name = localStorage.getItem("benutzername");
+if (name) {
+    document.getElementById("begrüßung").textContent = `Hallo, ${name}!`;
+}
+  </script>
 </head>
 <body>
+  <h2 id="begrüßung"></h2>
   <h1>was willst du hier?</h1>
   <div class="link-grid">
     <a href="dayplan.html">dayplan (responsible)</a>
