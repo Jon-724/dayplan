@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>welcome</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Wilkommen</h1>
+        <p>Wie heißt du?</p>
+        <input type="text" id="username" placeholder=" " />
+        <button onclick="weiter()">weiter</button>
+    </div>
+
+    <script>
+        function weiter() {
+            const name = document.getElementById("username").value.trim().toLowerCase();
+
+
+            const erlaubteNamen = ["Nika", "Jonathan"];
+
+            if (erlaubteNamen.includes(name)) {
+
+                localStorage.setItem("benutzername", name);
+                window.location.href = "nextindex.html";
+            } else {
+                alert("Für dich geht es hier nicht weiter");
+            }
+        }
+    </script>
+</body>
+</html>
