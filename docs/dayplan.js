@@ -90,8 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
       btnPlus.textContent = "+";
       btnPlus.onclick = () => addPoints(name, points);
 
-      task.innerHTML = `<span>${name} (${points > 0 ? '+' : ''}${points})</span>`;
-      task.appendChild(btnPlus);
+const nameSpan = document.createElement("span");
+nameSpan.textContent = `${name} (${points > 0 ? '+' : ''}${points})`;
+nameSpan.style.marginRight = "10px"; 
+
+task.appendChild(nameSpan);
+task.appendChild(btnPlus);
+
       container.appendChild(task);
     });
   }
