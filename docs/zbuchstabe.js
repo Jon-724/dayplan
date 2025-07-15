@@ -6,7 +6,7 @@ function getRandomLetter() {
 }
 
 const letterElement = document.getElementById("letter");
-const button = document.getElementById("generateBtn");
+const button = document.getElementById("generateletter");
 
 button.addEventListener("click", () => {
     const randomLetter = getRandomLetter();
