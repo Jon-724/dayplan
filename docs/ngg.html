@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number guessing game</title>
+  <link rel="stylesheet" href="ngg.css">
+</head>
+<body>
+  <header>number guessing game</header>
+  <div class="container">
+    <h1 id="headline">rate mal an welche Zahl ich denke</h1>
+    <h2 id="displayTries">Versuche: 0</h2>
+    <form onsubmit="guessTheNumber(); return false;">
+      <input id="myNumber" type="number" required placeholder="Bitte Zahl eingeben...">
+    <button>raten</button>
+    </form>
+    <script src="ngg.js"></script>
+  </div>
+</body>
+</html>
