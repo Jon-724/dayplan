@@ -7,6 +7,7 @@ function guessTheNumber() {
 
     if(numberToGuess == myNumber.value) {
         headline.innerHTML = 'ok ja das ist meine Zahl';
+        return;
 
     }
 
@@ -17,5 +18,5 @@ function guessTheNumber() {
     if(numberToGuess < myNumber.value) {
         headline.innerHTML = 'Die Zahl ist kleiner';
     }
-
+myNumber.value = '':
 }
