@@ -18,5 +18,6 @@ function guessTheNumber() {
     if(numberToGuess < myNumber.value) {
         headline.innerHTML = 'Die Zahl ist kleiner';
     }
-myNumber.value = '':
+myNumber.value = '';
+
 }
