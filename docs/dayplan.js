@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ["Cooking (15 minutes)", 10],
   ["creative stuff (10 minutes)", 10],
   ["Driving lesson", 25],
-  ["Going outside (15 minutes)", 15],
+  ["Going outside (15 minutes, max 4)", 10],
   ["Helping (15 minutes)", 5],
   ["Homework (1 hour)", 100],
   ["Homework (30 minutes)", 40],
