@@ -1,0 +1,218 @@
+/* ------------------------------
+   Grundlayout
+-------------------------------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  background: #87ceeb;
+  overflow-x: hidden;
+}
+
+
+#park {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+}
+
+
+#park::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 80%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #fff200 0%, #fcbf49 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 30px #fcd34d;
+  z-index: 0;
+}
+
+
+#park::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, #3c8031, #76c893);
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+  z-index: 0;
+}
+
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 60px;
+  opacity: 0.8;
+  animation: moveClouds 60s linear infinite;
+}
+
+.cloud::before, .cloud::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.cloud::before { top: -20px; left: 10px; }
+.cloud::after { top: -10px; right: 10px; }
+
+@keyframes moveClouds {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(120%); }
+}
+
+
+.tree {
+  position: absolute;
+  bottom: 150px;
+  width: 30px;
+  height: 60px;
+  background: #8B5A2B;
+}
+
+.tree::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: -20px;
+  width: 70px;
+  height: 50px;
+  background: #2E8B57;
+  border-radius: 50%;
+}
+
+#game-container {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+#dog {
+  font-size: 150px;
+  margin: 20px 0;
+  position: relative;
+}
+
+
+#speech {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: #fff8dc;
+  border: 2px solid #555;
+  border-radius: 15px;
+  padding: 12px 18px;
+  font-style: italic;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#speech::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #fff8dc;
+  border-bottom: 0;
+  margin-left: -7.5px;
+}
+
+#speech::before {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border: 17px solid transparent;
+  border-top-color: #555;
+  border-bottom: 0;
+  margin-left: -8.5px;
+}
+
+
+#stats {
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+#stats p {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+#actions button {
+  margin: 10px 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  font-weight: bold;
+}
+
+#actions button:hover {
+  transform: scale(1.05);
+}
+
+#actions button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+
+@keyframes feedAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1) rotate(-5deg); }
+  100% { transform: scale(1); }
+}
+@keyframes playAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+  100% { transform: translateY(0); }
+}
+@keyframes sleepAnim {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px) rotate(-2deg); }
+  100% { transform: translateX(0); }
+}
+@keyframes mathAnim {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg) scale(1.05); }
+  100% { transform: rotate(0deg); }
+}
+
+#dog.feed { animation: feedAnim 0.8s ease-in-out; }
+#dog.play { animation: playAnim 0.8s ease-in-out; }
+#dog.sleep { animation: sleepAnim 0.8s ease-in-out; }
+#dog.math { animation: mathAnim 0.8s ease-in-out; }
