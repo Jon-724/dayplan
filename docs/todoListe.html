@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoListe</title>
+  <link rel="stylesheet" href="todoListe.css">
+</head>
+<body>
+
+<h1>TodoListe</h1>
+
+<div class="container">
+  <input id="taskInput" type="text" placeholder="Neue Aufgabe">
+  <input id="prioInput" type="number" min="1" max="10" placeholder="Priorität (1–10)">
+  <button id="addBtn">Hinzufügen</button>
+
+  <ul id="todoList"></ul>
+
+  <button id="clearBtn" class="danger">Liste löschen</button>
+</div>
+
+<script src="./todoListe.js"></script>
+</body>
+</html>
+
